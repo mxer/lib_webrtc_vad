@@ -19,11 +19,11 @@ AC_C_INLINE
 AC_TYPE_UINT32_T
 AC_TYPE_UINT8_T
 
-AC_CHECK_LIB([gtest], [main], [],
-[ 
-	echo "gtest failure." 
-	exit -1
-])
+#AC_CHECK_LIB([gtest], [main], [],
+#[ 
+#	echo "gtest failure." 
+#	exit -1
+#])
 
 AC_CHECK_LIB([pthread], [main], [],
 [

@@ -20,11 +20,7 @@ libwebrtcvad_la_SOURCES = \
 	webrtc/common_audio/signal_processing/cross_correlation.c			\
 	webrtc/common_audio/signal_processing/vector_scaling_operations.c		\
 	webrtc/common_audio/signal_processing/downsample_fast.c				\
-	webrtc/common_audio/signal_processing/get_scaling_square.c			\
-											\
-	webrtc/common_audio/wav_file.cc							\
-	webrtc/common_audio/wav_header.cc						\
-	webrtc/common_audio/audio_util.cc
+	webrtc/common_audio/signal_processing/get_scaling_square.c
 	
 	
 nobase_include_HEADERS = \
@@ -49,13 +45,4 @@ nobase_include_HEADERS = \
 	webrtc/system_wrappers/include/compile_assert_c.h				\
 	webrtc/system_wrappers/include/cpu_features_wrapper.h				\
 											\
-	webrtc/typedefs.h								\
-											\
-	webrtc/common_audio/wav_file.h							\
-	webrtc/base/safe_conversions.h							\
-	webrtc/base/safe_conversions_impl.h						\
-	webrtc/common_audio/include/audio_util.h					\
-	webrtc/base/scoped_ptr.h							\
-	webrtc/base/move.h								\
-	webrtc/base/template_util.h							\
-	webrtc/common_audio/wav_header.h
+	webrtc/typedefs.h
