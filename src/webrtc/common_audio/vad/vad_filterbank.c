@@ -150,7 +150,7 @@ static void SplitFilter(const int16_t* data_in, size_t data_length,
 //                        NOTE: |total_energy| is only updated if
 //                        |total_energy| <= |kMinEnergy|.
 // - log_energy   [o]   : 10 * log10("energy of |data_in|") given in Q4.
-static void LogOfEnergy(const int16_t* data_in, size_t data_length,
+void LogOfEnergy(const int16_t* data_in, size_t data_length,
                         int16_t offset, int16_t* total_energy,
                         int16_t* log_energy) {
   // |tot_rshifts| accumulates the number of right shifts performed on |energy|.
@@ -213,15 +213,19 @@ static void LogOfEnergy(const int16_t* data_in, size_t data_length,
     *log_energy = (int16_t)(((kLogConst * log2_energy) >> 19) +
         ((tot_rshifts * kLogConst) >> 9));
 
+    
+
     if (*log_energy < 0) {
       *log_energy = 0;
     }
   } else {
     *log_energy = offset;
+    //printf( "1:log_energy = %u\n", *log_energy);
     return;
   }
 
   *log_energy += offset;
+    //printf( "2:log_energy = %u\n", *log_energy);
 
   // Update the approximate |total_energy| with the energy of |data_in|, if
   // |total_energy| has not exceeded |kMinEnergy|. |total_energy| is used as an

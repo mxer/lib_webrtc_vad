@@ -41,4 +41,8 @@
 int16_t WebRtcVad_CalculateFeatures(VadInstT* self, const int16_t* data_in,
                                     size_t data_length, int16_t* features);
 
+void LogOfEnergy(const int16_t* data_in, size_t data_length,
+                        int16_t offset, int16_t* total_energy,
+                        int16_t* log_energy);
+
 #endif  // WEBRTC_COMMON_AUDIO_VAD_VAD_FILTERBANK_H_
